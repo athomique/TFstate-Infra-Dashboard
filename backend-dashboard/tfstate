@@ -1,0 +1,222 @@
+{
+  "resources": [
+    {
+      "provider": "google",
+      "type": "google_compute_instance",
+      "name": "gcp-vm-1",
+      "instances": [
+        {
+          "attributes": {
+            "id": "gcp-vm-12345",
+            "zone": "us-central1-a",
+            "network_interface": ["gcp-network-1"]
+          }
+        }
+      ]
+    },
+    {
+      "provider": "google",
+      "type": "google_compute_instance",
+      "name": "gcp-vm-2",
+      "instances": [
+        {
+          "attributes": {
+            "id": "gcp-vm-54321",
+            "zone": "us-central1-b",
+            "network_interface": ["gcp-network-2"]
+          }
+        }
+      ]
+    },
+    {
+      "provider": "google",
+      "type": "google_compute_network",
+      "name": "gcp-network-1",
+      "instances": [
+        {
+          "attributes": {
+            "id": "gcp-network-123",
+            "zone": "us-central1-a"
+          }
+        }
+      ]
+    },
+    {
+      "provider": "google",
+      "type": "google_compute_network",
+      "name": "gcp-network-2",
+      "instances": [
+        {
+          "attributes": {
+            "id": "gcp-network-456",
+            "zone": "us-central1-b"
+          }
+        }
+      ]
+    },
+    {
+      "provider": "aws",
+      "type": "aws_instance",
+      "name": "aws-vm-1",
+      "instances": [
+        {
+          "attributes": {
+            "id": "aws-vm-12345",
+            "availability_zone": "us-east-1a",
+            "network_interface": ["aws-network-1"]
+          }
+        }
+      ]
+    },
+    {
+      "provider": "aws",
+      "type": "aws_instance",
+      "name": "aws-vm-2",
+      "instances": [
+        {
+          "attributes": {
+            "id": "aws-vm-67890",
+            "availability_zone": "us-east-1b",
+            "network_interface": ["aws-network-2"]
+          }
+        }
+      ]
+    },
+    {
+      "provider": "aws",
+      "type": "aws_vpc",
+      "name": "aws-network-1",
+      "instances": [
+        {
+          "attributes": {
+            "id": "aws-network-123",
+            "availability_zone": "us-east-1a"
+          }
+        }
+      ]
+    },
+    {
+      "provider": "aws",
+      "type": "aws_vpc",
+      "name": "aws-network-2",
+      "instances": [
+        {
+          "attributes": {
+            "id": "aws-network-456",
+            "availability_zone": "us-east-1b"
+          }
+        }
+      ]
+    },
+    {
+      "provider": "azurerm",
+      "type": "azurerm_virtual_machine",
+      "name": "azure-vm-1",
+      "instances": [
+        {
+          "attributes": {
+            "id": "azure-vm-12345",
+            "location": "East US",
+            "network_interface_ids": ["azure-network-1"]
+          }
+        }
+      ]
+    },
+    {
+      "provider": "azurerm",
+      "type": "azurerm_virtual_machine",
+      "name": "azure-vm-2",
+      "instances": [
+        {
+          "attributes": {
+            "id": "azure-vm-67890",
+            "location": "East US 2",
+            "network_interface_ids": ["azure-network-2"]
+          }
+        }
+      ]
+    },
+    {
+      "provider": "azurerm",
+      "type": "azurerm_virtual_network",
+      "name": "azure-network-1",
+      "instances": [
+        {
+          "attributes": {
+            "id": "azure-network-123",
+            "location": "East US"
+          }
+        }
+      ]
+    },
+    {
+      "provider": "azurerm",
+      "type": "azurerm_virtual_network",
+      "name": "azure-network-2",
+      "instances": [
+        {
+          "attributes": {
+            "id": "azure-network-456",
+            "location": "East US 2"
+          }
+        }
+      ]
+    },
+    {
+      "provider": "google",
+      "type": "google_compute_instance",
+      "name": "gcp-vm-shared-zone",
+      "instances": [
+        {
+          "attributes": {
+            "id": "gcp-vm-shared-123",
+            "zone": "us-west1-a",
+            "network_interface": ["shared-network"]
+          }
+        }
+      ]
+    },
+    {
+      "provider": "aws",
+      "type": "aws_instance",
+      "name": "aws-vm-shared-zone",
+      "instances": [
+        {
+          "attributes": {
+            "id": "aws-vm-shared-123",
+            "availability_zone": "us-west-2a",
+            "network_interface": ["shared-network"]
+          }
+        }
+      ]
+    },
+    {
+      "provider": "azurerm",
+      "type": "azurerm_virtual_machine",
+      "name": "azure-vm-shared-zone",
+      "instances": [
+        {
+          "attributes": {
+            "id": "azure-vm-shared-123",
+            "location": "West US",
+            "network_interface_ids": ["shared-network"]
+          }
+        }
+      ]
+    },
+    {
+      "provider": "google",
+      "type": "google_compute_network",
+      "name": "shared-network",
+      "instances": [
+        {
+          "attributes": {
+            "id": "shared-network-123",
+            "zone": "us-west1-a"
+          }
+        }
+      ]
+    }
+  ]
+}
+
